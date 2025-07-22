@@ -2,25 +2,25 @@
 set -e
 
 # Prepare workspace for ROS Noetic dependencies and Autoware messages
-mkdir -p /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai
+mkdir -p /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai-test
 
 # ROS1 CARMA message setup
-cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
-cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
-cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
+cp -R /home/carma/autoware.ai-test/messages /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai-test/
+cp -R /home/carma/autoware.ai-test/jsk_common_msgs /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai-test/
+cp -R /home/carma/autoware.ai-test/jsk_recognition /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai-test/
 cp -R /home/carma/raptor-dbw-ros/raptor_dbw_msgs /home/carma/.base-image/ros1_msgs_ws/src/
 cp -R /home/carma/carma-dbw-mkz-ros/dbw_mkz_msgs /home/carma/.base-image/ros1_msgs_ws/src/
 
 # ROS2 CARMA message setup
-mkdir -p /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai
-cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
-cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
-cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
+mkdir -p /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai-test
+cp -R /home/carma/autoware.ai-test/messages /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai-test/
+cp -R /home/carma/autoware.ai-test/jsk_common_msgs /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai-test/
+cp -R /home/carma/autoware.ai-test/jsk_recognition /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai-test/
 cp -R /home/carma/raptor-dbw-ros2/raptor_dbw_msgs /home/carma/.base-image/ros2_msgs_ws/src/
 cp -R /home/carma/carma-dbw-mkz-ros/dbw_mkz_msgs_ros2 /home/carma/.base-image/ros2_msgs_ws/src/
 
 # Cleanup repos once messages have been moved
-rm -rf /home/carma/autoware.ai/
+rm -rf /home/carma/autoware.ai-test/
 rm -rf /home/carma/carma-dbw-mkz-ros/
 rm -rf /home/carma/raptor-dbw-ros/
 rm -rf /home/carma/raptor-dbw-ros2/
