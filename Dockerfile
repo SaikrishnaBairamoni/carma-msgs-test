@@ -92,7 +92,7 @@ ARG VCS_REF="NULL"
 ARG BUILD_DATE="NULL"
 
 LABEL org.label-schema.schema-version="1.0" \
-      org.label-schema.name="carma-msgs" \
+      org.label-schema.name="carma-msgs-test" \
       org.label-schema.description="carma msgs bridge for the CARMA Platform" \
       org.label-schema.vendor="Leidos" \
       org.label-schema.version=${VERSION} \

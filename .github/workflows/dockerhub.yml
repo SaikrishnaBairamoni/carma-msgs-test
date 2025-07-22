@@ -18,3 +18,4 @@ jobs:
     with:
       tag_name_suffix: humble
       remove_suffix: true
+      runner: ubuntu-latest
