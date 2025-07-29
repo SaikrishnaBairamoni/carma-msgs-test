@@ -69,15 +69,15 @@ cd /home/carma
 # that the install script is also hardcoded to look for. This should be uncoupled:
 # https://github.com/usdot-fhwa-stol/carma-platform/issues/2374
 if [[ "$BRANCH" == "develop" ]]; then
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
+      git clone https://github.com/SaikrishnaBairamoni/autoware.ai-test --depth 1 --branch carma-"$BRANCH"
       cd ${dir}/src
-      git clone  https://github.com/usdot-fhwa-stol/ros1_bridge.git --depth 1 --branch "$BRANCH"
+      git clone  https://github.com/SaikrishnaBairamoni/ros1_bridge-test --depth 1 --branch "$BRANCH"
 elif [[ "$BRANCH" == "master" ]]; then
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
+      git clone https://github.com/SaikrishnaBairamoni/autoware.ai-test --depth 1 --branch carma-"$BRANCH"
       cd ${dir}/src
-      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch carma-"$BRANCH"
+      git clone https://github.com/SaikrishnaBairamoni/ros1_bridge-test  --depth 1 --branch carma-"$BRANCH"
 else
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch "$BRANCH"
+      git clone https://github.com/SaikrishnaBairamoni/autoware.ai-test --depth 1 --branch "$BRANCH"
       cd ${dir}/src
-      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch "$BRANCH"
+      git clone https://github.com/SaikrishnaBairamoni/ros1_bridge-test  --depth 1 --branch "$BRANCH"
 fi
